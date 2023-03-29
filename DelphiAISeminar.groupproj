@@ -15,6 +15,9 @@
         <Projects Include="openaidemo4\openaidemo4.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="BioAuth\BioAuth.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="openaidemo4:Make">
         <MSBuild Projects="openaidemo4\openaidemo4.dproj" Targets="Make"/>
     </Target>
+    <Target Name="BioAuth">
+        <MSBuild Projects="BioAuth\BioAuth.dproj"/>
+    </Target>
+    <Target Name="BioAuth:Clean">
+        <MSBuild Projects="BioAuth\BioAuth.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BioAuth:Make">
+        <MSBuild Projects="BioAuth\BioAuth.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="OpenAIDemo1;OpenAIDemo2;OpenAIDemo3;openaidemo4"/>
+        <CallTarget Targets="OpenAIDemo1;OpenAIDemo2;OpenAIDemo3;openaidemo4;BioAuth"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="OpenAIDemo1:Clean;OpenAIDemo2:Clean;OpenAIDemo3:Clean;openaidemo4:Clean"/>
+        <CallTarget Targets="OpenAIDemo1:Clean;OpenAIDemo2:Clean;OpenAIDemo3:Clean;openaidemo4:Clean;BioAuth:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="OpenAIDemo1:Make;OpenAIDemo2:Make;OpenAIDemo3:Make;openaidemo4:Make"/>
+        <CallTarget Targets="OpenAIDemo1:Make;OpenAIDemo2:Make;OpenAIDemo3:Make;openaidemo4:Make;BioAuth:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
