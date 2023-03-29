@@ -45,7 +45,7 @@ begin
     '"max_tokens":2048,'+
     '"temperature":0}';
  RESTRequest1.Params.Clear;
- RESTRequest1.Params.AddItem('Authorization', 'Bearer ' + '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' , pkHTTPHEADER, [poDoNotEncode]);
+ RESTRequest1.Params.AddItem('Authorization', 'Bearer ' + 'klucz_z_openai' , pkHTTPHEADER, [poDoNotEncode]);
  RESTRequest1.Body.ClearBody;
  RESTRequest1.AddBody(PostData, DefaultRESTContentType.ctAPPLICATION_JSON);
  Showmessage(PostData);
