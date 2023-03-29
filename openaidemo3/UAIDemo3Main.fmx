@@ -1,0 +1,68 @@
+object FAIDemo3Main: TFAIDemo3Main
+  Left = 0
+  Top = 0
+  Caption = 'Malarz zawodowy'
+  ClientHeight = 480
+  ClientWidth = 502
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'red fox jumping over the branch')
+    StyledSettings = [Size, Style, FontColor]
+    TextSettings.Font.Family = '(Default)'
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 502.000000000000000000
+    Size.Height = 173.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 494.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 502.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 502.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Malarz zawodowy'
+      TabOrder = 0
+    end
+  end
+  object Button1: TButton
+    Align = Top
+    Position.Y = 217.000000000000000000
+    Size.Width = 502.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'narysuj mi...'
+    OnClick = Button1Click
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Contents
+    Size.Width = 502.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 502.000000000000000000
+    Size.Height = 219.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
