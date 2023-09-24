@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0FA0FAD8-418A-4071-A81E-C106708733B9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="openaidemo1\OpenAIDemo1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="openaidemo2\OpenAIDemo2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="openaidemo3\OpenAIDemo3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="openaidemo4\openaidemo4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="BioAuth\BioAuth.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OpenAIDemo1">
+        <MSBuild Projects="openaidemo1\OpenAIDemo1.dproj"/>
+    </Target>
+    <Target Name="OpenAIDemo1:Clean">
+        <MSBuild Projects="openaidemo1\OpenAIDemo1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenAIDemo1:Make">
+        <MSBuild Projects="openaidemo1\OpenAIDemo1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OpenAIDemo2">
+        <MSBuild Projects="openaidemo2\OpenAIDemo2.dproj"/>
+    </Target>
+    <Target Name="OpenAIDemo2:Clean">
+        <MSBuild Projects="openaidemo2\OpenAIDemo2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenAIDemo2:Make">
+        <MSBuild Projects="openaidemo2\OpenAIDemo2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OpenAIDemo3">
+        <MSBuild Projects="openaidemo3\OpenAIDemo3.dproj"/>
+    </Target>
+    <Target Name="OpenAIDemo3:Clean">
+        <MSBuild Projects="openaidemo3\OpenAIDemo3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenAIDemo3:Make">
+        <MSBuild Projects="openaidemo3\OpenAIDemo3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="openaidemo4">
+        <MSBuild Projects="openaidemo4\openaidemo4.dproj"/>
+    </Target>
+    <Target Name="openaidemo4:Clean">
+        <MSBuild Projects="openaidemo4\openaidemo4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="openaidemo4:Make">
+        <MSBuild Projects="openaidemo4\openaidemo4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BioAuth">
+        <MSBuild Projects="BioAuth\BioAuth.dproj"/>
+    </Target>
+    <Target Name="BioAuth:Clean">
+        <MSBuild Projects="BioAuth\BioAuth.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BioAuth:Make">
+        <MSBuild Projects="BioAuth\BioAuth.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OpenAIDemo1;OpenAIDemo2;OpenAIDemo3;openaidemo4;BioAuth"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OpenAIDemo1:Clean;OpenAIDemo2:Clean;OpenAIDemo3:Clean;openaidemo4:Clean;BioAuth:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OpenAIDemo1:Make;OpenAIDemo2:Make;OpenAIDemo3:Make;openaidemo4:Make;BioAuth:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

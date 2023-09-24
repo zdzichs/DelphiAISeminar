@@ -1,0 +1,99 @@
+object FAIDemo2Main: TFAIDemo2Main
+  Left = 0
+  Top = 0
+  Caption = 'T'#322'umacz programista'
+  ClientHeight = 480
+  ClientWidth = 404
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      '10 for i = 1 to 10'
+      '20 j = j + 2'
+      '25 PRINT "ALA"'
+      '30 next i')
+    StyledSettings = [Size, Style, FontColor]
+    TextSettings.Font.Family = 'Courier New'
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 404.000000000000000000
+    Size.Height = 173.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 396.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+  object Memo2: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    StyledSettings = [Size, Style, FontColor]
+    TextSettings.Font.Family = 'Courier New'
+    Align = Client
+    Size.Width = 404.000000000000000000
+    Size.Height = 219.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 396.000000000000000000
+    Viewport.Height = 211.000000000000000000
+  end
+  object Button1: TButton
+    Align = Top
+    Position.Y = 217.000000000000000000
+    Size.Width = 404.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'przet'#322'umacz BASIC na Delphi ->'
+    OnClick = Button1Click
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Contents
+    Size.Width = 404.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 404.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 404.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'T'#322'umacz programista'
+      TabOrder = 0
+    end
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 272
+    Top = 72
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Method = rmPOST
+    Params = <>
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 144
+    Top = 64
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'https://api.openai.com/v1/completions'
+    ContentType = 'application/x-www-form-urlencoded'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 32
+    Top = 8
+  end
+end
